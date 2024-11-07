@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Budget vs Revenue Scatter Plot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the external CSS file -->
+  </head>
+  <body>
+    <div id="chart-container">
+      <div id="filters">
+        <button class="genre-btn selected" data-genre="35">Comedy</button>
+        <button class="genre-btn" data-genre="28">Action</button>
+        <button class="genre-btn" data-genre="18">Drama</button>
+        <!-- Add more genre buttons as needed -->
+      </div>
+      <div id="chart"></div>
+    </div>
+    <div id="controls">
+      <select id="sortBy" onchange="updateChart()">
+        <option value="budgetAsc">Sort by Budget (Ascending)</option>
+        <option value="budgetDesc">Sort by Budget (Descending)</option>
+        <option value="revenueAsc">Sort by Revenue (Ascending)</option>
+        <option value="revenueDesc">Sort by Revenue (Descending)</option>
+      </select>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Link to the external JavaScript file -->
+  </body>
+</html>
